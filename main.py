@@ -17,6 +17,24 @@ def read_root():
     return {"Hello": "World"}
 
 
+@app.get("/programas")
+def read_root():
+    return [
+        {
+            "name": "Club Diablos",
+            "id": "clubdiablos",
+            "bg": "#D5001C",
+            "front": "#fff"
+        },
+        {
+            "name": "Club Modelorama",
+            "id": "clubmodelorama",
+            "bg": "#1A2837",
+            "front": "#FFBB00"
+        },
+    ]
+
+
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
     return {"item_id": item_id, "q": q}
