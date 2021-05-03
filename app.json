@@ -1,0 +1,13 @@
+{
+  "name": "bwapiblue",
+  "description": "BW API",
+  "image": "heroku/python",
+  "repository": "https://github.com/ealbinu/bwapi",
+  "keywords": ["python", "fastapi" ],
+  "addons": [],
+  "env": {
+  },
+  "environments": {
+    
+  }
+}
