@@ -4,13 +4,13 @@ from fastapi import FastAPI
 
 from pydantic import BaseModel
 
-from dbprogramas import programas
+#from dbprogramas import programas
 
-from fastapi.staticfiles import StaticFiles
+#from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+#app.mount("/static", StaticFiles(directory="static"), name="static")
 
 class Item(BaseModel):
     name: str
@@ -23,11 +23,11 @@ class Item(BaseModel):
 def read_root():
     return {"Hello": "World"}
 
-
+"""
 @app.get("/programas")
 def read_root():
     return programas
-
+"""
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
