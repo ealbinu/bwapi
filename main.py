@@ -4,27 +4,20 @@ from fastapi import FastAPI
 
 from pydantic import BaseModel
 
+from dbprogramas import programas
+
+from fastapi.staticfiles import StaticFiles
+
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 class Item(BaseModel):
     name: str
     price: float
     is_offer: Optional[bool] = None
 
-programas = [
-    {
-        "name": "Club Diablos",
-        "id": "clubdiablos",
-        "bg": "#D5001C",
-        "front": "#fff"
-    },
-    {
-        "name": "Club Modelorama",
-        "id": "clubmodelorama",
-        "bg": "#1A2837",
-        "front": "#FFBB00"
-    },
-]
+
 
 @app.get("/")
 def read_root():
