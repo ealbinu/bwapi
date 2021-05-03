@@ -11,6 +11,20 @@ class Item(BaseModel):
     price: float
     is_offer: Optional[bool] = None
 
+programas = [
+    {
+        "name": "Club Diablos",
+        "id": "clubdiablos",
+        "bg": "#D5001C",
+        "front": "#fff"
+    },
+    {
+        "name": "Club Modelorama",
+        "id": "clubmodelorama",
+        "bg": "#1A2837",
+        "front": "#FFBB00"
+    },
+]
 
 @app.get("/")
 def read_root():
@@ -19,20 +33,7 @@ def read_root():
 
 @app.get("/programas")
 def read_root():
-    return [
-        {
-            "name": "Club Diablos",
-            "id": "clubdiablos",
-            "bg": "#D5001C",
-            "front": "#fff"
-        },
-        {
-            "name": "Club Modelorama",
-            "id": "clubmodelorama",
-            "bg": "#1A2837",
-            "front": "#FFBB00"
-        },
-    ]
+    return programas
 
 
 @app.get("/items/{item_id}")
