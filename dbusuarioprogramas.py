@@ -11,6 +11,8 @@ usuarioprogramas = [
         "name": "+Kota Loyalty",
         "id": "maskota",
         "bg": "#82DDF6",
-        "front": "#602687"
+        "front": "#602687",
+        "puntos": "100",
+        "tarjeta": "0000000004321"
     },
 ]
