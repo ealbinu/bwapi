@@ -28,6 +28,7 @@ app.add_middleware(
 )
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/pwa", StaticFiles(directory="pwa"), name="pwa")
 
 class Item(BaseModel):
     name: str
