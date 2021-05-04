@@ -4,11 +4,13 @@ from fastapi import FastAPI
 
 from pydantic import BaseModel
 
-from dbprogramas import programas
-
 from fastapi.staticfiles import StaticFiles
 
 from fastapi.middleware.cors import CORSMiddleware
+
+from dbprogramas import programas
+from dbusuarioprogramas import usuarioprogramas
+
 
 
 app = FastAPI()
@@ -34,6 +36,9 @@ class Item(BaseModel):
 
 
 
+
+
+
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
@@ -43,7 +48,16 @@ def read_root():
 def read_root():
     return programas
 
+@app.post("/usuario/programas")
+def read_root():
+    return usuarioprogramas
 
+
+
+
+
+
+################
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
     return {"item_id": item_id, "q": q}
