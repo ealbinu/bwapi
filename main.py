@@ -56,7 +56,7 @@ def listar_programas_de_usuario():
 
 
 @app.post("/programas/promociones")
-def listar_programas_de_usuario():
+def listar_promociones():
     return dbpromociones
 
 
