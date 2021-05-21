@@ -41,16 +41,16 @@ class Item(BaseModel):
 
 
 @app.get("/")
-def read_root():
+def read_root_and_hello_world():
     return {"Hello": "World"}
 
 
 @app.get("/programas")
-def read_root():
+def listar_programas():
     return programas
 
 @app.post("/usuario/programas")
-def read_root():
+def listar_programas_de_usuario():
     return usuarioprogramas
 
 
