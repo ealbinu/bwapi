@@ -9,6 +9,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
 from dbprogramas import programas
+from dbpromociones import promos
 from dbusuarioprogramas import usuarioprogramas
 
 
@@ -52,6 +53,11 @@ def listar_programas():
 @app.post("/usuario/programas")
 def listar_programas_de_usuario():
     return usuarioprogramas
+
+
+@app.post("/programas/promociones")
+def listar_programas_de_usuario():
+    return dbpromociones
 
 
 

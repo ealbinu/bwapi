@@ -1,4 +1,4 @@
-usuarioprogramas = [
+promos = [
     {
         "url": "https://bwapiblue.herokuapp.com/static/promo1.jpg",
         "Title": "Promocion 1",
